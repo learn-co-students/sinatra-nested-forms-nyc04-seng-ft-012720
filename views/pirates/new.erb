@@ -1,1 +1,47 @@
-<h1>Make your form here</h1>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CreatePirateShips</title>
+  </head>
+<body>
+<h1> Welcome to the Pirate And Ship Site!</h1>
+<h2> This is where you are going to create a pirate and their ship/s</h2>
+
+<ul>
+<form method="POST" action="/pirates">
+  <li><label for="pirate[name]"> Pirate Name </label>
+      <input id="pirate[name]" type="text"  name="pirate[name]">
+  </li>
+  <li><label for="pirate[weight]"> Pirate Weight </label>
+      <input id="pirate[weight]" type="text"  name="pirate[weight]">
+  </li>
+  <li><label for="pirate[height]"> Pirate Height </label>
+      <input id="pirate[height]" type="text"  name="pirate[height]">
+  </li>
+  <li><label for="pirate[ships][][name]"> Ship Name </label>
+      <input id="pirate[ships][][name]" type="text"  name="ship_name_1">
+  </li>
+  <li><label for="pirate[ships][][type]"> Ship Type </label>
+      <input id="pirate[ships][][type]" type="text"  name="ship_type_1">
+  </li>
+  <li><label for="pirate[ships][][booty]"> Ship Booty Attributes </label>
+      <input id="pirate[ships][][booty]" type="text"  name="ship_booty_1">
+  </li>
+  <li><label for="pirate[ships][][name]"> Ship Name </label>
+      <input id="pirate[ships][][name]" type="text"  name="ship_name_2">
+  </li>
+  <li><label for="pirate[ships][][type]"> Ship Type </label>
+      <input id="pirate[ships][][type]" type="text"  name="ship_type_2">
+  </li>
+  <li><label for="pirate[ships][][booty]"> Ship Booty Attributes </label>
+      <input id="pirate[ships][][booty]" type="text"  name="ship_booty_2">
+  </li>
+  <li><input type="submit" value="Submit"></li>
+</form>
+</ul>  
+
+</body>
+</html>
+
+<%# 
+2. Make a nested form (this should probably have html `<label>`s so it makes sense to a user). This form will be creating three objects (one instance of the Pirate class, and two instances of the Ship class). Remember, you'll need to build a corresponding controller action to load this page. Your form should `POST` to the route `'/pirates'`. %>
